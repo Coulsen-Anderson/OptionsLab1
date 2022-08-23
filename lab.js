@@ -296,13 +296,14 @@ class Phone {
     this.storage = storage 
     this. color = color
     this.price = price 
-    this.soldProperties = soldProperties
+    this.soldProperties = false
   }
   sell(){
+    this.sold = true
     console.log(`${this.brand} ${this.model} has been sold.`)
   }
-  changePrice(){
-
+  changePrice(newPrice){
+   this.price = newPrice
   }
 }
 
@@ -318,6 +319,9 @@ class Phone {
 */
 
 //Code Here
+let iphone = new Phone('Apple', '13 Pro + X', 256, 'Green', 700000)
+
+// console.log(iphone)
 
 /* 
   Call the changePrice function on one of your phones, 
@@ -327,6 +331,8 @@ class Phone {
 */ 
 
 //Code Here 
+iphone.changePrice(700)
+console.log(iphone)
 
 
 /*
@@ -355,8 +361,8 @@ const colors = {
 //do not edit this object
 
 //Code Here 
-const colorsCopy = {...color, img: 'orange'}
-console.log(colorsCopy)
+// const colorsCopy = {...color, img: 'orange'}
+// console.log(colorsCopy)
 
 
 
